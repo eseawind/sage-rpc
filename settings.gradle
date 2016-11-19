@@ -1,2 +1,3 @@
 rootProject.name = 'sage-rpc'
+include 'sage-rpc-core'
 

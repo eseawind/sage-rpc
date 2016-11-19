@@ -1,4 +1,0 @@
-rootProject.name = 'sage-rpc'
-include 'sage-rpc-core'
-include 'sage-rpc-container'
-

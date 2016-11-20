@@ -23,4 +23,9 @@ public abstract class Container {
 	 * @throws InterruptedException
 	 */
 	public abstract void join() throws InterruptedException;
+
+	/**
+	 * Jetty Container Stop Method
+	 */
+	public abstract void stop();
 }

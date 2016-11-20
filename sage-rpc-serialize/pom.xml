@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sage-rpc</artifactId>
+        <groupId>org.sagesource</groupId>
+        <version>${rpc.version}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>sage-rpc-serialize</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>sage-rpc-serialize-json</module>
+        <module>sage-rpc-serialize-api</module>
+    </modules>
+
+    <properties>
+        <fastjson.version>1.2.12</fastjson.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.sagesource</groupId>
+            <artifactId>sage-rpc-core</artifactId>
+            <version>${rpc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sagesource</groupId>
+            <artifactId>sage-rpc-common</artifactId>
+            <version>${rpc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sagesource</groupId>
+            <artifactId>sage-rpc-serialize-api</artifactId>
+            <version>${rpc.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

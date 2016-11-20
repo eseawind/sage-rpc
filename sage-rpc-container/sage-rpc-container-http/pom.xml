@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sage-rpc-container-jetty</artifactId>
+    <artifactId>sage-rpc-container-http</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>

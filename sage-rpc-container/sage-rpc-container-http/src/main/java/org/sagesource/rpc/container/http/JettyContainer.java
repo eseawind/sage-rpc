@@ -8,6 +8,7 @@ import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.util.thread.QueuedThreadPool;
 import org.eclipse.jetty.util.thread.ThreadPool;
+import org.sagesource.common.Constants;
 import org.sagesource.common.utils.ConfigUtils;
 import org.sagesource.rpc.continer.Container;
 import org.slf4j.Logger;
@@ -23,19 +24,6 @@ import org.slf4j.LoggerFactory;
  */
 public class JettyContainer extends Container {
 	private static final Logger LOGGER = LoggerFactory.getLogger(JettyContainer.class);
-
-	private static final String JETTY_PORT        = "sage.jetty.port";
-	private static final String JETTY_TARGET      = "sage.jetty.target";
-	private static final String JETTY_HOST        = "sage.jetty.host";
-	private static final String JETTY_TIMEOUT     = "sage.jetty.timeout";
-	private static final String JETTY_MIN_THREADS = "sage.jetty.minthread";
-	private static final String JETTY_MAX_THREADS = "sage.jetty.maxthread";
-
-	private static final String DEFAULT_JETTY_PORT        = "8080";
-	private static final String DEFAULT_JETTY_HOST        = "127.0.0.1";
-	private static final String DEFAULT_JETTY_TIMEOUT     = "3000";
-	private static final String DEFAULT_JETTY_MIN_THREADS = "10";
-	private static final String DEFAULT_JETTY_MAX_THREADS = "500";
 
 	//Jetty Handlers
 	private AbstractHandler[] abstractHandlers;
@@ -97,8 +85,8 @@ public class JettyContainer extends Container {
 	private ThreadPool createThreadPool() {
 		QueuedThreadPool threadPool = new QueuedThreadPool();
 
-		minThreads = ConfigUtils.getProperty(JETTY_MIN_THREADS, DEFAULT_JETTY_MIN_THREADS);
-		maxThreads = ConfigUtils.getProperty(JETTY_MAX_THREADS, DEFAULT_JETTY_MAX_THREADS);
+		minThreads = ConfigUtils.getProperty(Constants.SAGE_JETTY_MIN_THREADS, Constants.DEFAULT_SAGE_JETTY_MIN_THREADS);
+		maxThreads = ConfigUtils.getProperty(Constants.SAGE_JETTY_MAX_THREADS, Constants.DEFAULT_SAGE_JETTY_MAX_THREADS);
 
 		threadPool.setMinThreads(Integer.valueOf(minThreads));
 		threadPool.setMaxThreads(Integer.valueOf(maxThreads));
@@ -114,9 +102,9 @@ public class JettyContainer extends Container {
 	private NetworkConnector createNetworkConnector() {
 		ServerConnector networkConnector = new ServerConnector(server);
 
-		host = ConfigUtils.getProperty(JETTY_HOST, DEFAULT_JETTY_HOST);
-		port = ConfigUtils.getProperty(JETTY_PORT, DEFAULT_JETTY_PORT);
-		timeout = ConfigUtils.getProperty(JETTY_TIMEOUT, DEFAULT_JETTY_TIMEOUT);
+		host = ConfigUtils.getProperty(Constants.SAGE_JETTY_HOST, Constants.DEFAULT_SAGE_JETTY_HOST);
+		port = ConfigUtils.getProperty(Constants.SAGE_JETTY_PORT, Constants.DEFAULT_SAGE_JETTY_PORT);
+		timeout = ConfigUtils.getProperty(Constants.SAGE_JETTY_TIMEOUT, Constants.DEFAULT_SAGE_JETTY_TIMEOUT);
 
 		networkConnector.setHost(host);
 		networkConnector.setPort(Integer.valueOf(port));

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sage-rpc</artifactId>
+        <groupId>org.sagesource</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>sage-rpc-invoke</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>sage-rpc-invoke-http</module>
+        <module>sage-rpc-invoke-api</module>
+    </modules>
+
+    <properties>
+        <httpclient.version>4.5.1</httpclient.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.sagesource</groupId>
+            <artifactId>sage-rpc-core</artifactId>
+            <version>${rpc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sagesource</groupId>
+            <artifactId>sage-rpc-common</artifactId>
+            <version>${rpc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sagesource</groupId>
+            <artifactId>sage-rpc-invoke-api</artifactId>
+            <version>${rpc.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

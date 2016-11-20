@@ -27,6 +27,8 @@
         <module>sage-rpc-container</module>
         <module>sage-rpc-common</module>
         <module>sage-rpc-serialize</module>
+        <module>sage-rpc-invoke</module>
+        <module>sage-rpc-registry</module>
     </modules>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>

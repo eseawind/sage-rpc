@@ -9,7 +9,7 @@ package org.sagesource.common;
  * </pre>
  */
 public class Constants {
-
+	//...........固定值...........//
 	public static final String DEFAULT_SAGE_PROPERTIES        = "sagerpc.properties";
 	public static final String DEFAULT_SAGE_JETTY_PORT        = "8080";
 	public static final String DEFAULT_SAGE_JETTY_HOST        = "127.0.0.1";
@@ -17,6 +17,7 @@ public class Constants {
 	public static final String DEFAULT_SAGE_JETTY_MIN_THREADS = "10";
 	public static final String DEFAULT_SAGE_JETTY_MAX_THREADS = "500";
 
+	//..........配置Key值..........//
 	public static final String SAGE_PROPERTIES_KEY    = "sage.properties.file";
 	public static final String SAGE_JETTY_PORT        = "sage.jetty.port";
 	public static final String SAGE_JETTY_TARGET      = "sage.jetty.target";
@@ -24,4 +25,7 @@ public class Constants {
 	public static final String SAGE_JETTY_TIMEOUT     = "sage.jetty.timeout";
 	public static final String SAGE_JETTY_MIN_THREADS = "sage.jetty.minthread";
 	public static final String SAGE_JETTY_MAX_THREADS = "sage.jetty.maxthread";
+
+
+	public static final String SAGE_SERVICE_LOCATION_PREFIX = "sage.service.location.";
 }

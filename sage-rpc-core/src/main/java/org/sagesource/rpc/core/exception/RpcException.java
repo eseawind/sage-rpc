@@ -37,6 +37,11 @@ public class RpcException extends Exception {
 		this.data = data;
 	}
 
+	public RpcException(String message, Object data) {
+		super(message);
+		this.data = data;
+	}
+
 	@Override
 	public String getMessage() {
 		return message;

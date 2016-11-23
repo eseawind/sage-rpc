@@ -9,6 +9,7 @@ package org.sagesource.common;
  * </pre>
  */
 public class Constants {
+
 	//...........固定值...........//
 	public static final String DEFAULT_SAGE_PROPERTIES        = "sagerpc.properties";
 	public static final String DEFAULT_SAGE_JETTY_PORT        = "8080";
@@ -28,4 +29,6 @@ public class Constants {
 
 
 	public static final String SAGE_SERVICE_LOCATION_PREFIX = "sage.service.location.";
+
+	public static final String SAGE_HTTP_INVOKE_DATA = "sage_http_invoke_data";
 }

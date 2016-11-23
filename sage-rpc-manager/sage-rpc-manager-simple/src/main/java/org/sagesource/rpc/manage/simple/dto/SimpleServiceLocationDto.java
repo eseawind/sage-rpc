@@ -10,9 +10,18 @@ package org.sagesource.rpc.manage.simple.dto;
  */
 public class SimpleServiceLocationDto {
 
+	private String schema;
 	private String host;
 	private String port;
 	private String target;
+
+	public String getSchema() {
+		return schema;
+	}
+
+	public void setSchema(String schema) {
+		this.schema = schema;
+	}
 
 	public String getHost() {
 		return host;

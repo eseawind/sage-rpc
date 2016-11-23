@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 /**
- * <p>简单服务发现,根据sage.service.location.xxx=host:port:traget,...的格式,来发现服务的调用位置</p>
+ * <p>简单服务发现,根据sage.service.location.xxx=schema:host:port:traget,...的格式,来发现服务的调用位置</p>
  * <pre>
  *     author      Sage XueQi
  *     date        2016/11/22
@@ -60,6 +60,7 @@ public class SimpleServiceFinder {
 		SimpleServiceLocationDto dto    = new SimpleServiceLocationDto();
 
 		int index = 0;
+		dto.setSchema(result.get(index++));
 		dto.setHost(result.get(index++));
 		dto.setPort(result.get(index++));
 		dto.setTarget(result.get(index++));

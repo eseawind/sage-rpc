@@ -139,14 +139,18 @@ public class ConfigUtils {
 	 */
 	public static Properties getProperties() {
 		if (PROPERTIES == null) {
-			String path = System.getProperty(Constants.SAGE_PROPERTIES_KEY);
-			if (path == null || path.length() == 0) {
-				path = System.getenv(Constants.SAGE_PROPERTIES_KEY);
-				if (path == null || path.length() == 0) {
-					path = Constants.DEFAULT_SAGE_PROPERTIES;
+			synchronized (ConfigUtils.class) {
+				if (PROPERTIES == null) {
+					String path = System.getProperty(Constants.SAGE_PROPERTIES_KEY);
+					if (path == null || path.length() == 0) {
+						path = System.getenv(Constants.SAGE_PROPERTIES_KEY);
+						if (path == null || path.length() == 0) {
+							path = Constants.DEFAULT_SAGE_PROPERTIES;
+						}
+					}
+					PROPERTIES = loadProperties(path, false, true);
 				}
 			}
-			PROPERTIES = loadProperties(path, false, true);
 		}
 		return PROPERTIES;
 	}

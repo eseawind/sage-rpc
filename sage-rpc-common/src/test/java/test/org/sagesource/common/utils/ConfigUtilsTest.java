@@ -1,7 +1,7 @@
 package test.org.sagesource.common.utils;
 
 import org.junit.Test;
-import org.sagesource.common.utils.ConfigUtils;
+import org.sagesource.rpc.common.utils.ConfigUtils;
 
 /**
  * <p></p>

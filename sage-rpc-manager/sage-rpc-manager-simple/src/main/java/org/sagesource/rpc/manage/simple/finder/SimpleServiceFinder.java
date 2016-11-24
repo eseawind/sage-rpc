@@ -2,8 +2,8 @@ package org.sagesource.rpc.manage.simple.finder;
 
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
-import org.sagesource.common.Constants;
-import org.sagesource.common.utils.ConfigUtils;
+import org.sagesource.rpc.common.Constants;
+import org.sagesource.rpc.common.utils.ConfigUtils;
 import org.sagesource.rpc.manage.exception.RpcManageException;
 import org.sagesource.rpc.manage.simple.dto.SimpleServiceLocationDto;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package org.sagesource.rpc.core.exception;
+package org.sagesource.rpc.common.exception;
 
 /**
  * <p>RPC Framework Exception</p>

@@ -1,4 +1,4 @@
-package org.sagesource.common;
+package org.sagesource.rpc.common;
 
 /**
  * <p>Framework Constant Value</p>

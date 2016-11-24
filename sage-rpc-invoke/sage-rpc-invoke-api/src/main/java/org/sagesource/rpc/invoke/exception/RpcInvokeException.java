@@ -1,6 +1,6 @@
 package org.sagesource.rpc.invoke.exception;
 
-import org.sagesource.rpc.core.exception.RpcException;
+import org.sagesource.rpc.common.exception.RpcException;
 
 /**
  * <p></p>

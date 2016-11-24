@@ -1,4 +1,4 @@
-package org.sagesource.common.utils;
+package org.sagesource.rpc.common.utils;
 
 /**
  * <p>Class 操作类</p>

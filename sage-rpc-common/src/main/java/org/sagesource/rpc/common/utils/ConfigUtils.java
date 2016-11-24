@@ -1,6 +1,6 @@
-package org.sagesource.common.utils;
+package org.sagesource.rpc.common.utils;
 
-import org.sagesource.common.Constants;
+import org.sagesource.rpc.common.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

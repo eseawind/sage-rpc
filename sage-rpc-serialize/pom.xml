@@ -32,12 +32,6 @@
     <dependencies>
         <dependency>
             <groupId>org.sagesource</groupId>
-            <artifactId>sage-rpc-core</artifactId>
-            <version>${rpc.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.sagesource</groupId>
             <artifactId>sage-rpc-common</artifactId>
             <version>${rpc.version}</version>
         </dependency>

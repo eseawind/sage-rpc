@@ -23,7 +23,7 @@
     <artifactId>sage-rpc</artifactId>
     <version>${rpc.version}</version>
     <modules>
-        <module>sage-rpc-core</module>
+        <module>sage-rpc-framework</module>
         <module>sage-rpc-container</module>
         <module>sage-rpc-common</module>
         <module>sage-rpc-serialize</module>

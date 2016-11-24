@@ -14,6 +14,8 @@ import org.sagesource.rpc.invoke.http.dto.InvokeTargetInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,6 +57,23 @@ public class HttpInvoker {
 			}
 		} catch (Exception e) {
 			throw new RpcInvokeException("Remote Processor Call Exception", e, requestMessage + "[" + serviceUrl + "]");
+		}
+	}
+
+	/**
+	 * 远程服务响应
+	 *
+	 * @param responseMessage
+	 * @param outputStream
+	 * @throws RpcInvokeException
+	 */
+	public void response(String responseMessage, OutputStream outputStream) throws RpcInvokeException {
+		LOGGER.debug("Remote Processor Call Service Response:[{}]", responseMessage);
+
+		try {
+			outputStream.write(responseMessage.getBytes(Charsets.UTF_8));
+		} catch (IOException e) {
+			throw new RpcInvokeException("Remote Processor Call Service Exception", e, responseMessage);
 		}
 	}
 
